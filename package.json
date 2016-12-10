@@ -13,9 +13,9 @@
     "gulp": "gulp",
     "lint": "eslint src *.js --ext .js --ext .jsx; exit 0",
     "proxy": "websockify",
-    "start": "node bin/serve",
-    "serve": "node bin/serve",
-    "serve-dev": "nodemon bin/serve -w lib/server",
+    "start": "node bin/wowser-pipeline",
+    "serve": "node bin/wowser-pipeline",
+    "serve-dev": "nodemon bin/wowser-pipeline -w lib/server",
     "pretest": "gulp rebuild",
     "reset": "gulp reset",
     "test": "istanbul test ./node_modules/mocha/bin/_mocha -- spec --recursive"
