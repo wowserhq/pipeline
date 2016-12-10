@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "lint": "eslint src *.js --ext .js --ext .jsx; exit 0",
+    "build": "gulp build",
     "start": "node bin/wowser-pipeline",
     "start-dev": "gulp start-dev",
     "pretest": "gulp build",
