@@ -19,14 +19,14 @@ gulp.task('reset', function(done) {
   done();
 });
 
-gulp.task('clean', function(cb) {
+gulp.task('build:clean', function(cb) {
   del([
     'lib/*',
     'spec/*'
   ], cb);
 });
 
-gulp.task('scripts', function() {
+gulp.task('build:compile', function() {
   return gulp.src(config.scripts)
       .pipe(cache('babel'))
       .pipe(plumber())
@@ -34,21 +34,21 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('.'));
 });
 
+gulp.task('build', gulp.series(
+  'build:clean', 'build:compile'
+));
+
 gulp.task('spec', function() {
   return gulp.src(config.specs, { read: false })
       .pipe(plumber())
       .pipe(mocha());
 });
 
-gulp.task('rebuild', gulp.series(
-  'clean', 'scripts'
-));
-
 gulp.task('watch', function(done) {
-  gulp.watch(config.scripts, gulp.series('scripts', 'spec'));
+  gulp.watch(config.scripts, gulp.series('build:compile', 'spec'));
   done();
 });
 
 gulp.task('default', gulp.series(
-  'rebuild', 'spec', 'watch'
+  'build', 'spec', 'watch'
 ));

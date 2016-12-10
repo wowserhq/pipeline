@@ -15,7 +15,7 @@
     "start": "node bin/wowser-pipeline",
     "serve": "node bin/wowser-pipeline",
     "serve-dev": "nodemon bin/wowser-pipeline -w lib/server",
-    "pretest": "gulp rebuild",
+    "pretest": "gulp build",
     "reset": "gulp reset",
     "test": "istanbul test ./node_modules/mocha/bin/_mocha -- spec --recursive"
   },
