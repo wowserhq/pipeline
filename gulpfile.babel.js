@@ -4,6 +4,7 @@ import cache from 'gulp-cached';
 import del from 'del';
 import gulp from 'gulp';
 import mocha from 'gulp-mocha';
+import nodemon from 'gulp-nodemon';
 import pkg from './package.json';
 import plumber from 'gulp-plumber';
 
@@ -46,6 +47,16 @@ gulp.task('spec', function() {
 
 gulp.task('watch', function(done) {
   gulp.watch(config.scripts, gulp.series('build:compile', 'spec'));
+  done();
+});
+
+gulp.task('start-dev', function(done) {
+  nodemon({
+    script: 'bin/wowser-pipeline',
+    watch: ['src'],
+    tasks: ['build', 'spec'],
+  });
+
   done();
 });
 
