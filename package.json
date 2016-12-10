@@ -17,7 +17,8 @@
     "serve-dev": "nodemon bin/wowser-pipeline -w lib/server",
     "pretest": "gulp build",
     "reset": "gulp reset",
-    "test": "istanbul test ./node_modules/mocha/bin/_mocha -- spec --recursive"
+    "test": "istanbul test ./node_modules/mocha/bin/_mocha -- spec --recursive",
+    "install": "gulp build"
   },
   "repository": "wowserhq/wowser-pipeline",
   "author": "Tim Kurvers <tim@moonsphere.net>",
