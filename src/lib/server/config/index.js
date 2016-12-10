@@ -1,5 +1,4 @@
 import Configstore from 'configstore';
-import Promise from 'bluebird';
 import inquirer from 'inquirer';
 
 import pkg from '../../../package.json';
@@ -30,10 +29,11 @@ class ServerConfig {
   }
 
   prompt() {
-    return new Promise((resolve, _reject) => {
-      console.log('> Preparing initial setup\n');
+    console.log('> Preparing initial setup\n');
 
-      inquirer.prompt(prompts, answers => {
+    return inquirer.
+      prompt(prompts).
+      then((answers) => {
         Object.keys(answers).map(key => {
           return this.db.set(key, answers[key]);
         });
@@ -41,9 +41,9 @@ class ServerConfig {
         this.db.set('isFirstRun', false);
 
         console.log('\n> Setup finished!');
-        resolve();
+
+        return true;
       });
-    });
   }
 }
 

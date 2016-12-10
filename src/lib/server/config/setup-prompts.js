@@ -1,5 +1,6 @@
 import fs from 'fs';
 import os from 'os';
+import Promise from 'bluebird';
 
 export default [
   {
@@ -13,16 +14,16 @@ export default [
       return '/Applications/World of Warcraft/Data';
     },
     validate: function(value) {
-      const done = this.async();
-
-      fs.lstat(value, function(err, stats) {
-        if (err) {
-          done('Invalid path');
-        } else if (stats.isDirectory()) {
-          done(true);
-        } else {
-          done('Please provide path to a directory');
-        }
+      return new Promise((resolve, _reject) => {
+        fs.lstat(value, function(err, stats) {
+          if (err) {
+            resolve('Invalid path');
+          } else if (stats.isDirectory()) {
+            resolve(true);
+          } else {
+            resolve('Please provide path to a directory');
+          }
+        });
       });
     }
   },
