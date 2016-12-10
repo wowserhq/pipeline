@@ -12,7 +12,6 @@
   "scripts": {
     "gulp": "gulp",
     "lint": "eslint src *.js --ext .js --ext .jsx; exit 0",
-    "proxy": "websockify",
     "start": "node bin/wowser-pipeline",
     "serve": "node bin/wowser-pipeline",
     "serve-dev": "nodemon bin/wowser-pipeline -w lib/server",
