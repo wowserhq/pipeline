@@ -1,5 +1,7 @@
 # Wowser Pipeline
 
+[![Join chat](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat)](https://gitter.im/wowserhq/wowser)
+
 Wowser Pipeline is the client asset server for the Wowser project.
 
 [Learn more about Wowser](https://github.com/wowserhq/wowser)
