@@ -36,7 +36,6 @@
     "globby": "^6.1.0",
     "inquirer": "^2.0.0",
     "jsbn": "timkurvers/jsbn.git#wowser",
-    "keymaster": "^1.6.2",
     "morgan": "^1.3.2",
     "pngjs": "^3.0.0"
   },
