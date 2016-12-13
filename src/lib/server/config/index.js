@@ -1,7 +1,6 @@
 import Configstore from 'configstore';
 import inquirer from 'inquirer';
-
-import pkg from '../../../package.json';
+import ReadPkgUp from 'read-pkg-up';
 import prompts from './setup-prompts';
 
 class ServerConfig {
@@ -14,6 +13,7 @@ class ServerConfig {
   };
 
   constructor(defaults = this.constructor.DEFAULTS) {
+    const { pkg } = ReadPkgUp.sync();
     this.db = new Configstore(pkg.name, defaults);
   }
 
