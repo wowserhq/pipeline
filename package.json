@@ -20,6 +20,12 @@
   },
   "repository": "wowserhq/wowser-pipeline",
   "author": "Tim Kurvers <tim@moonsphere.net>",
+  "contributors": [
+    {
+      "name": "fallenoak",
+      "url": "https://twitter.com/fallenoak"
+    }
+  ],
   "license": "MIT",
   "keywords": [
     "world of warcraft",
