@@ -1,6 +1,8 @@
 # Wowser Pipeline
 
-[![Join chat](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat)](https://gitter.im/wowserhq/wowser)
+[![Join Chat](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat)](https://gitter.im/wowserhq/wowser)
+[![Build Status](https://img.shields.io/travis/wowserhq/wowser-pipeline.svg?style=flat)](https://travis-ci.org/wowserhq/wowser-pipeline)
+[![Coverage](https://img.shields.io/codeclimate/coverage/github/wowserhq/wowser-pipeline.svg?style=flat)](https://codeclimate.com/github/wowserhq/wowser-pipeline)
 
 Wowser Pipeline is the client asset server for the Wowser project.
 
@@ -139,7 +141,7 @@ Wowser Pipeline is written in [ES2015], developed with [Gulp], compiled by
    npm run start
    ```
 
-   Please keep in mind that you'll need to manually restart the server
+   Please keep in mind that you'll need to manually restart the server each
    each time you make changes. Make sure you pay attention to the output
    of each of the linting, testing, and building sessions.
 
