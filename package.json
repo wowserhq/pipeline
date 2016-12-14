@@ -12,7 +12,7 @@
   "scripts": {
     "lint": "eslint src *.js --ext .js; exit 0",
     "build": "gulp build",
-    "start": "node bin/wowser-pipeline",
+    "start": "bin/wowser-pipeline",
     "start-dev": "gulp start-dev",
     "reset": "gulp reset",
     "test": "gulp test",
