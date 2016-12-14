@@ -13,3 +13,4 @@ addons:
       - g++-4.8
 env:
   - CXX=g++-4.8
+script: npm run lint && npm run build && npm run test:coverage
