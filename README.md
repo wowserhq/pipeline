@@ -104,34 +104,44 @@ Wowser Pipeline is written in [ES2015], developed with [Gulp], compiled by
 4. Install [StormLib] and [BLPConverter], which are used to handle Blizzard's
    game files.
 
-5. Build the pipeline server:
+6. Choose a development mode:
+
+   Note: If this is your first time running the pipeline server, you'll be
+   prompted for various settings. See the First Run section above for more
+   details.
+
+   **All-In-One**
+
+   If you would prefer an all-in-one development setup, you should run:
 
    ```shell
-   npm run build
-   ```
-
-6. After building, start the pipeline server in development mode by running:
-
-   ```shell
-   npm run start-dev
+   npm run develop
    ```
 
    This will start the pipeline server, and monitor for any changes in
    `src/**/*`. Whenever a change is detected, the pipeline server will be
-   automatically rebuilt and restarted.
+   automatically linted, tested, rebuilt and restarted.
 
-   If this is your first time running the pipeline server, you'll be prompted
-   for various settings. See the First Run section above for more details.
+   **Split**
 
-   If you would prefer to restart the pipeline server manually while developing,
-   you can start the pipeline server in production mode by running:
+   If you would prefer to split up linting, testing, and building into
+   separate shell sessions, you should run each of these commands individually:
+
+   ```shell
+   npm run lint:watch
+   npm run test:watch
+   npm run build:watch
+   ```
+
+   and then run the following to start the server:
 
    ```shell
    npm run start
    ```
 
-   In this case, you will need to make sure you build after any changes (see
-   step 5).
+   Please keep in mind that you'll need to manually restart the server
+   each time you make changes. Make sure you pay attention to the output
+   of each of the linting, testing, and building sessions.
 
 7. If all went well, you should be able to try a pipeline search by visiting the
    following URL in your browser:
@@ -147,7 +157,8 @@ When contributing, please:
 1. Fork the repository
 2. Create a single-topic branch in your fork
 3. Open a pull request using the branch from step 2
-4. Be patient while waiting for the PR to be reviewed
+4. Fix any issues raised by the CI environment
+5. Be patient while waiting for the PR to be reviewed
 
 [Babel]: https://babeljs.io/
 [BLPConverter]: https://github.com/wowserhq/blizzardry#blp
