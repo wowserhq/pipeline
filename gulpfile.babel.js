@@ -35,10 +35,10 @@ gulp.task('build:clean', function(cb) {
 
 gulp.task('build:compile', function() {
   return gulp.src(config.scripts)
-      .pipe(cache('babel'))
-      .pipe(plumber())
-      .pipe(babel())
-      .pipe(gulp.dest('.'));
+    .pipe(cache('babel'))
+    .pipe(plumber())
+    .pipe(babel())
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('build', gulp.series(
@@ -60,13 +60,12 @@ gulp.task('watch', function(done) {
   done();
 });
 
-gulp.task('start-dev', function(done) {
+gulp.task('start:dev', function(done) {
   nodemon({
     script: 'bin/wowser-pipeline',
     watch: ['src'],
     tasks: ['build:compile', 'test'],
   });
-
   done();
 });
 

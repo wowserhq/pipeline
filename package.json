@@ -13,7 +13,7 @@
     "lint": "eslint src *.js --ext .js; exit 0",
     "build": "gulp build",
     "start": "bin/wowser-pipeline",
-    "start-dev": "gulp start-dev",
+    "start:dev": "gulp start:dev",
     "reset": "gulp reset",
     "test": "gulp test",
     "test:coverage": "gulp test:coverage"
