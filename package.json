@@ -59,7 +59,7 @@
     "babel-plugin-transform-export-extensions": "^6.8.0",
     "babel-plugin-transform-function-bind": "^6.8.0",
     "babel-polyfill": "^6.20.0",
-    "codeclimate-test-reporter": "^0.3.0",
+    "codeclimate-test-reporter": "^0.4.0",
     "del": "^1.2.0",
     "eslint": "^3.12.0",
     "eslint-config-wowser-base": "^0.1.0",
