@@ -10,13 +10,16 @@
     "README.md"
   ],
   "scripts": {
-    "lint": "eslint src *.js --ext .js; exit 0",
-    "build": "gulp build",
     "start": "bin/wowser-pipeline",
-    "start:dev": "gulp start:dev",
     "reset": "gulp reset",
+    "develop": "gulp develop",
+    "lint": "gulp lint",
+    "lint:watch": "gulp lint:watch",
     "test": "gulp test",
-    "test:coverage": "gulp test:coverage"
+    "test:coverage": "gulp test:coverage",
+    "test:watch": "gulp test:watch",
+    "build": "gulp build",
+    "build:watch": "gulp build:watch"
   },
   "repository": "wowserhq/wowser-pipeline",
   "author": "Tim Kurvers <tim@moonsphere.net>",
@@ -64,11 +67,13 @@
     "gulp": "gulpjs/gulp.git#4.0",
     "gulp-babel": "^6.1.0",
     "gulp-cached": "^1.1.0",
+    "gulp-eslint": "^3.0.0",
     "gulp-jest": "^0.6.0",
     "gulp-nodemon": "wowserhq/gulp-nodemon.git",
     "gulp-plumber": "^1.1.0",
     "gulp-remember": "^0.3.0",
     "gulp-stylus": "^2.5.0",
+    "gulp-util": "^3.0.0",
     "jest": "^17.0.0",
     "nodemon": "^1.9.0"
   }
