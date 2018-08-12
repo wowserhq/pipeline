@@ -2,7 +2,7 @@
 
 [![Join Chat](https://img.shields.io/badge/gitter-join_chat-blue.svg?style=flat)](https://gitter.im/wowserhq/wowser)
 [![Build Status](https://img.shields.io/travis/wowserhq/wowser-pipeline.svg?style=flat)](https://travis-ci.org/wowserhq/wowser-pipeline)
-[![Coverage](https://img.shields.io/codeclimate/coverage/github/wowserhq/wowser-pipeline.svg?style=flat)](https://codeclimate.com/github/wowserhq/wowser-pipeline)
+[![Coverage](https://api.codeclimate.com/v1/badges/6257a30ccd1a3c2212a0/test_coverage)](https://codeclimate.com/github/wowserhq/pipeline)
 
 Wowser Pipeline is the client asset server for the Wowser project.
 
