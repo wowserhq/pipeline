@@ -1,5 +1,5 @@
 {
-  "name": "wowser-pipeline",
+  "name": "@wowserhq/pipeline",
   "version": "0.0.1",
   "description": "World of Warcraft asset pipeline",
   "main": "lib/server/index.js",
@@ -21,7 +21,7 @@
     "build": "gulp build",
     "build:watch": "gulp build:watch"
   },
-  "repository": "wowserhq/wowser-pipeline",
+  "repository": "github:wowserhq/pipeline",
   "author": "Tim Kurvers <tim@moonsphere.net>",
   "contributors": [
     {
